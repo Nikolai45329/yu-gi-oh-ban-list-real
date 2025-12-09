@@ -82,10 +82,12 @@
                 .then(response =>  response.json())
                 .then(data =>{
 
+
                     for (var i = 0; i < data.length; i++) {
 
-                        console.log("GET /posts=>", data[i].name);
-                        document.getElementsByClassName(i).innerHTML = data[i].name;
+                        console.log("GET /posts=>", data[i].image);
+
+                        document.getElementById(0).innerHTML = data[i].image;
                     }
 
                 })
@@ -94,25 +96,25 @@
         </script>
 
         <div class="container section-title" data-aos="fade-up">
-            <h2>Limmited card examples</h2>
+            <h2>Banned card examples</h2>
 
         </div><!-- End Section Title -->
 
         <div class="list">
 
             <div class="row gy-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card">
-                        <img  src="" alt="" class="img-fluid">
+                        <img id="0" src="assets/img/about.jpg" alt="image   " class="img-fluid">
                         <div class="card-body">
-                            <h3 class=1 style="color:white"></h3>
+                            <h3 class="1" style="color:white"></h3>
                             <div class="card-content">
-                                <p class=1></p>
+                                <p class="1"></p>
                             </div>
                         </div>
                     </div>
                 </div><!-- End Card Item -->
-
             </div>
 
         </div>

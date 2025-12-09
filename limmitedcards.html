@@ -70,89 +70,56 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="featured-services" class="featured-services section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Limmited card examples</h2>
-
-        </div><!-- End Section Title -->
-
-        <div class="container">
-
-            <div class="row gy-4">
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h3 style="color:white">Skill Drain</h3>
-                            <div class="card-content">
-                                <p>Activate this card by paying 1000 LP. Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated). </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Card Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="assets/img/monsterlimmited.jpeg" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h3 style="color:white">Dark Grepher</h3>
-                            <div class="card-content">
-                                <p>You can Special Summon this card (from your hand) by discarding 1 Level 5 or higher DARK monster. Once per turn: You can discard 1 DARK monster; send 1 DARK monster from your Deck to the GY. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Card Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <img src="assets/img/spelllimmited.jpeg" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h3 style="color:white">Bonfire</h3>
-                            <div class="card-content">
-                                <p>Add 1 Level 4 or lower Pyro monster from your Deck to your hand. You can only activate 1 "Bonfire" per turn.  </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Card Item -->
-
-
-
-            </div>
-
-        </div>
-
-    </section>
     <!-- Featured Services Section -->
-    <section id = "cards">
-        <body>
-
+    <section id="cards" class="featured-services section">
         <script>
             const BASE_URL = 'http://localhost:3000/';
-            const myJSON = '{ "id": 1, "name": "John roe", "image": "adfsasdf/asdf"}';
+            const myJSON = '{ "id": 1, "name": "John roe", "image": "john@example.com" }';
             const myObj = JSON.parse(myJSON);
             const postscontainer = document.getElementById("posts-container")
-            fetch('http://localhost:3000/cards')
+            fetch('http://localhost:3000/a')
                 .then(response =>  response.json())
                 .then(data =>{
 
+                    for (var i = 0; i < data.length; i++) {
 
-
-                    for (let i = 0; i < data.length; i++) {
-
-                        console.log("GET /posts=>", data[i].name);
-                        document. getElementById(i).innerText = data[i].name
+                        console.log("GET /posts=>", data[i].id);
+                        document.getElementsByClassName(i).innerHTML = data[i];
                     }
 
                 })
                 .catch(error => console.error("error fetsching posts:", error));
 
         </script>
-        </body>
 
-        <p id =1></p>
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Limmited card examples</h2>
+
+        </div><!-- End Section Title -->
+
+        <div class="list">
+
+            <div class="row gy-4">
+
+
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <img id=1 src="" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <h3 class=1 style="color:white"></h3>
+                            <div class="card-content">
+                                <p class=1></p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Card Item -->
+
+            </div>
+
+        </div>
+
     </section>
 </main>
 

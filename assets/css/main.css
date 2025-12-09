@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #7cc576; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #7cc576; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to sbnd out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -736,6 +736,11 @@ section,
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
+}
+
+.list{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 @media (max-width: 1199px) {
@@ -2442,4 +2447,8 @@ section,
   justify-content: center;
   align-items: center;
   text-align: center; /* Ensures text is centered inside the div */
+}
+
+table{
+    align-items: center;
 }

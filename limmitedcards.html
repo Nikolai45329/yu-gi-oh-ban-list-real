@@ -126,7 +126,34 @@
 
     </section>
     <!-- Featured Services Section -->
+    <section id = "cards">
+        <body>
 
+        <script>
+            const BASE_URL = 'http://localhost:3000/';
+            const myJSON = '{ "id": 1, "name": "John roe", "image": "adfsasdf/asdf"}';
+            const myObj = JSON.parse(myJSON);
+            const postscontainer = document.getElementById("posts-container")
+            fetch('http://localhost:3000/cards')
+                .then(response =>  response.json())
+                .then(data =>{
+
+
+
+                    for (let i = 0; i < data.length; i++) {
+
+                        console.log("GET /posts=>", data[i].name);
+                        document. getElementById(i).innerText = data[i].name
+                    }
+
+                })
+                .catch(error => console.error("error fetsching posts:", error));
+
+        </script>
+        </body>
+
+        <p id =1></p>
+    </section>
 </main>
 
 <footer id="footer" class="footer dark-background">

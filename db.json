@@ -1,6 +1,6 @@
 {
     "a": [
-      { "id": 1, "name": "Archnemeses Protos" ,"image": "assets/img/about.jpg", "des" : "" },
+      { "id": 1, "name": "Archnemeses Protos" ,"image": "/home/peter/shulle/wmc/yu-gi-oh-ban-list-real/assets/img/about.jpg", "des": "" },
       { "id": 2, "name": "Bystial Druiswurm" ,"image": "assets/img/","des" : "" },
       { "id": 3, "name": "Bystial Magnamhut" ,"image": "assets/img/", "des" : ""},
       { "id": 4, "name": "Dark Grepher" ,"image": "assets/img/","des" : "" },

@@ -86,8 +86,11 @@
                     for (var i = 0; i < data.length; i++) {
 
                         console.log("GET /posts=>", data[i]);
-                        document.getElementById(i).innerHTML =data[i].name ;
-                        //document.getElementsByClassName(i).innerHTML = data[i].name;
+                        const images = document.getElementsByClassName(0);
+                        const name = document.getElementsByClassName(1);
+                        images[i].src = data[i].image;
+                        name[i].innerHTML = data[i].name;
+
                     }
 
                 })
@@ -96,9 +99,12 @@
         </script>
 
 
-        <h3 id="2" class="0"></h3>
-        <p id="1" class="0"></p>
-        <img id="0" class="1" src="" alt="" width="10px" height="10px">
+        <img class="0" src="" width=100px height=100px></img>
+        <img class="0" src="" width=100px height=100px></img>
+        <p class=1></p>
+        <p class=1></p>
+       
+
     </section>
 </main>
 

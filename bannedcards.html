@@ -33,7 +33,7 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <a href="mainpage.html" class="logo d-flex align-items-center me-auto me-xl-0">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="OtherIcons/Untitled-removebg-preview.png" alt="">
             <h1 class="sitename">Yu-gi-oh Banlist</h1>
@@ -70,59 +70,1145 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="featured-services" class="featured-services section">
+    <section id="cards" class="featured-services section">
+        <script>
+            const BASE_URL = 'http://localhost:3000/';
+            const myJSON = '{ "id": 1, "name": "John roe", "image": "john@example.com", "des": "asdf"}';
+            const myObj = JSON.parse(myJSON);
+            const postscontainer = document.getElementById("posts-container")
+            fetch('http://localhost:3000/b')
+                .then(response =>  response.json())
+                .then(data =>{
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Banned card examples</h2>
 
-        </div><!-- End Section Title -->
+                    for (var i = 0; i < data.length; i++) {
 
-        <div class="container">
+                        console.log("GET /posts=>", data[i]);
+                        const images = document.getElementsByClassName("images");
+                        const name = document.getElementsByClassName("text");
+                        const des = document.getElementsByClassName("des");
+                        images[i].src = data[i].image;
+                        name[i].innerHTML = data[i].name;
+                        des[i].innerHTML = data[i].des;
 
-            <div class="row gy-4">
+                    }
 
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h3 style="color:white">Skill Drain</h3>
-                            <div class="card-content">
-                                <p>Activate this card by paying 1000 LP. Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated). </p>
+                })
+                .catch(error => console.error("error fetsching posts:", error));
+
+        </script>
+
+        <section id="featured-services" class="featured-services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>limmited card </h2>
+
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- End Card Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="assets/img/monsterlimmited.jpeg" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h3 style="color:white">Dark Grepher</h3>
-                            <div class="card-content">
-                                <p>You can Special Summon this card (from your hand) by discarding 1 Level 5 or higher DARK monster. Once per turn: You can discard 1 DARK monster; send 1 DARK monster from your Deck to the GY. </p>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- End Card Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <img src="assets/img/bannedspell.jpeg" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h3 style="color:white">pot of greed</h3>
-                            <div class="card-content">
-                                <p>Add 2 Cards on to your hand</p>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- End Card Item -->
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="assets/img/traplimmited.jpeg" alt="" class="img-fluid images">
+                            <div class="card-body">
+                                <h3 class="text" style="color:white"></h3>
+                                <div class="card-content">
+                                    <p class ="des"> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card Item -->
 
 
+
+                </div>
 
             </div>
 
-        </div>
+        </section>
+
+
 
     </section>
     <!-- Featured Services Section -->
